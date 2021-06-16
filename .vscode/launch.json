@@ -1,0 +1,60 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/daianeff/testes_AV1_/aom/bin/aomenc",
+            "args": ["--limit=8",
+                //"--disable_prune_partitions_before_search",
+                //"--disable_prune_partitions_after_split",
+                //"--disable_prune_4_way_partition_search", //seg fault
+                //"--disable_av1_prune_ab_partitions", //seg fault
+                //"--disable_av1_ml_prune_4_partition",
+                //"--disable_prune_4_partition_using_split_info",
+                //"--disable_av1_ml_prune_rect_partition",
+                //"--disable_prune_partitions_after_none",
+                "--verbose",
+                //"--large-scale-tile=0",
+                "--psnr",
+                "--frame-parallel=0",
+                "--tile-columns=0",
+                "--passes=2",
+                "--cpu-used=0",
+                "--threads=1",
+                "--kf-min-dist=1000",
+                "--kf-max-dist=1000",
+                "--end-usage=q",
+                "--lag-in-frames=19",
+                //"--width=416",
+                //"--height=240",
+                "--cq-level=4",
+                //"--bit-depth=8",
+                //"--fps=50/1",
+                "-o",
+                //"/home/icaro/av1_pesquisa/output/bin/BlowingBubbles_416x240_50fps_8bit_20qp_3frames_gprof_noOPT.webm",
+                //"/home/icaro/Videos/vvc/BlowingBubbles_416x240_50.yuv"
+                //"/home/icaro/av1_pesquisa/output/bin/NetflixBarScene_4096x2160_60_60f_10bit_420.webm",
+                //"/home/icaro/Videos/av1_sets/NetflixBarScene_4096x2160_60_60f_10bit_420.y4m"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ] 
+}
+
+       
